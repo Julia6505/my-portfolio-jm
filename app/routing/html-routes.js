@@ -6,22 +6,22 @@ var path = require("path");
 module.exports = function(app) {
 
     app.get('/', function(req, res){
-        res.sendFile(path.join(__dirname,"../view/index.html"));
+        res.sendFile(path.join(__dirname,"../../view/index.html"));
     });
     app.get("/about-me", function(req, res) {
-        res.sendFile(path.join(__dirname, "../view/about_me.html"));
+        res.sendFile(path.join(__dirname, "../../view/about_me.html"));
     });
     
     app.get("/portfolio", function (req, res) {
-        res.sendFile(path.join(__dirname, "../view/portfolio.html"));
+        res.sendFile(path.join(__dirname, "../../view/portfolio.html"));
     });
 
     app.get("/contact-me", function (req, res) {
-        res.sendFile(path.join(__dirname, "../view/contact_me.html"));
+        res.sendFile(path.join(__dirname, "../../view/contact_me.html"));
     });
 
     app.get("*", function(req, res) {
-        res.sendFile(path.join(__dirname, "../view/index.html"));
+        res.sendFile(path.join(__dirname, "../../view/index.html"));
     });
  
 };
